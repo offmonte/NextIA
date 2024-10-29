@@ -113,14 +113,6 @@ Para deletar um cliente pelo id_cliente:
 
 NEXTIA é uma solução prática para gerenciar programas de fidelidade, oferecendo uma interface simples para a gestão de clientes e recompensas, além de facilitar a visualização de dados através de gráficos interativos. Contribuições são bem-vindas!
 
-## Considerações
-
-- **Personalização**: Você pode personalizar o conteúdo do `README.md` conforme necessário, adicionando informações sobre como contribuir, informações de licenciamento e quaisquer outras seções relevantes.
-- **Exemplos Reais**: Considere usar exemplos de JSON mais representativos dos dados reais que o sistema vai manipular, especialmente se houver alguma lógica ou formatação especial.
-- **Documentação de Uso**: Se houver funcionalidades adicionais ou opções de configuração, adicione essa documentação no `README.md`. 
-
-Com esse modelo, você terá uma boa base para documentar seu projeto NEXTIA! Se precisar de mais alguma coisa, é só avisar.
-
 ## Integrantes
 
 Bianca Barreto - RM551848
