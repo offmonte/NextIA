@@ -1,0 +1,44 @@
+-- Criação da Tabela de Clientes (tabela Master)
+CREATE TABLE Clientes (
+    id_cliente INT PRIMARY KEY IDENTITY(1,1),
+    CPF NVARCHAR(11) NOT NULL UNIQUE,
+    nome NVARCHAR(100) NOT NULL,
+    pontos INT DEFAULT 0
+);
+
+-- Criação da Tabela de Recompensas (tabela Detail)
+CREATE TABLE Recompensas (
+    id_recompensa INT PRIMARY KEY IDENTITY(1,1),
+    tipo_recompensa NVARCHAR(50) NOT NULL,  -- Ex: "Desconto" ou "Produto"
+    descricao NVARCHAR(255) NOT NULL,
+    data_resgate DATETIME NULL,  -- Data em que a recompensa foi resgatada
+    id_cliente INT NULL,  -- Cliente que resgatou a recompensa, pode ser NULL
+    FOREIGN KEY (id_cliente) REFERENCES Clientes(id_cliente)
+);
+
+-- Inserindo dados na Tabela de Clientes
+INSERT INTO Clientes (CPF, nome, pontos) VALUES 
+('12345678901', 'Ana Silva', 150),
+('23456789012', 'Carlos Pereira', 200),
+('34567890123', 'Maria Oliveira', 120),
+('45678901234', 'José Souza', 180),
+('56789012345', 'Luiza Alves', 90),
+('67890123456', 'Pedro Martins', 210),
+('78901234567', 'Fernanda Costa', 175),
+('89012345678', 'Marcos Rocha', 130),
+('90123456789', 'Beatriz Gomes', 240),
+('01234567890', 'João Melo', 100);
+
+-- Inserindo dados na Tabela de Recompensas
+-- Recompensas com data de resgate e cliente associado, ou sem resgate ainda
+INSERT INTO Recompensas (tipo_recompensa, descricao, data_resgate, id_cliente) VALUES 
+('Desconto', 'Desconto de 10% na próxima compra', '2024-09-15', 1),
+('Desconto', 'Desconto de 15% em produtos selecionados', '2024-09-20', 2),
+('Desconto', 'Desconto de 20% em qualquer item', NULL, NULL),
+('Produto', 'Camiseta personalizada', '2024-10-01', 4),
+('Produto', 'Caneca exclusiva', NULL, NULL),
+('Produto', 'Chaveiro de metal', '2024-10-05', 6),
+('Desconto', 'Desconto de 5% na próxima compra', NULL, NULL),
+('Produto', 'Ecobag personalizada', '2024-10-10', 8),
+('Produto', 'Bloco de notas sustentável', NULL, NULL),
+('Produto', 'Adesivos exclusivos', '2024-10-15', 10);

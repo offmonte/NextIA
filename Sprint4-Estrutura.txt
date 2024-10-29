@@ -1,0 +1,10 @@
+Explicação Sprint 4 - NextIA
+
+Explicação da Estrutura
+Tabela Clientes: contém apenas informações básicas dos clientes (id_cliente, CPF, nome, pontos).
+Tabela Recompensas:
+
+Inclui uma coluna id_cliente para registrar o cliente que resgatou a recompensa, que pode ser NULL se a recompensa ainda não foi resgatada.
+
+A coluna data_resgate armazena a data em que a recompensa foi resgatada, que também pode ser NULL se não houver resgate.
+Essa configuração permite que a tabela Recompensas registre qual cliente resgatou cada recompensa e a data do resgate, mantendo flexibilidade para recompensas não resgatadas.
